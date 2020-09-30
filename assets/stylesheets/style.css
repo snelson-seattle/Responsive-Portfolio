@@ -1,0 +1,69 @@
+body {
+    background: url('../images/background.jpg');
+}
+
+footer {
+    position: fixed; 
+    margin: 0px;
+    padding: 10px 10px 0px 10px; 
+    bottom: 0; 
+    width: 100%; 
+    /* Height of the footer*/  
+    height: 40px; 
+    background: #5d615e;
+}
+
+img {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+h1 {
+    color:  #5b8573;
+}
+
+hr {
+    height: 10px;
+    border: 0;
+    box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    margin-left: 10px;
+}
+
+.navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+    background: #5b8573;
+    font-size: 2.0rem;
+}
+
+.container {
+    background-color: white;    
+}
+
+.footer-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 5px;
+    background: #5b8573;
+}
+
+.card-img-top {
+    display: block;
+    /* changed to block to use mx-auto for centering img on the card */
+    
+}
+
+#profilePic {
+    float: left;
+}

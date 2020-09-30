@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <script>
+            const ROCK = 1;
+            const PAPER = 2;
+            const SCISSORS = 3;
+
+            var wins = 0;
+            var ties = 0;
+            var losses = 0;
+
+            alert("Let's Play Rock, Paper, Scissors!");
+
+            for(let i = 0; i < 10; i++){
+                let choice = 0;
+                while((choice < 1 || choice > 3) || isNaN(choice)) {
+                    choice = prompt("Type 1 for 'Rock', Type 2 for 'Paper', Type 3 for 'Scissors'");
+                };
+                
+                let cpu = Math.ceil(Math.random() * 3);
+
+                switch(parseInt(choice)){
+                    case ROCK:
+                        if(cpu === ROCK){
+                            alert("Tie, computer also chose Rock");
+                            ties++;
+                            break;
+                        }else if(cpu === PAPER){
+                            alert("You lose, computer chose Paper");
+                            losses++;
+                            break;
+                        }else{
+                            alert("You win, computer chose Scissors");
+                            wins++;
+                            break;
+                        }
+                    case PAPER:
+                        if(cpu === ROCK){
+                            alert("You win, computer chose Rock");
+                            wins++;
+                            break;
+                        }else if(cpu === PAPER){
+                            alert("Tie, computer also chose Paper");
+                            ties++;
+                            break;
+                        }else{
+                            alert("You lose, computer chose Scissors");
+                            losses++;
+                            break;
+                        }
+                    case SCISSORS:
+                    if(cpu === ROCK){
+                            alert("You lose, computer chose Rock");
+                            losses++; 
+                            break;                       
+                        }else if(cpu === PAPER){
+                            alert("You win, computer chose Paper");
+                            wins++;
+                            break;
+                        }else{
+                            alert("Tie, computer also chose Scissors");
+                            ties++;
+                            break;
+                        }
+                }
+            
+            }
+
+            alert("You won " + wins + " times!");
+            alert("You lost " + losses + " times.");
+            alert("You tied " + ties + " times.");
+
+        </script>
+    </body>
+</html>
